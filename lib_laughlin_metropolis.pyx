@@ -3,10 +3,10 @@ Program: lib_laughlin_metropolis.pyx
 Authors: Tommaso Comparin (tommaso.comparin@unitn.it),
          Elia Macaluso (elia.macaluso@unitn.it)
 
-This program implements the Monte Carlo sampling for classical-plasma
-analogy of the Laughlin wave function. The correspoding probability
-distribution is defined in the README.md file, which also includes a
-note on the physical units used here.
+This program implements Monte Carlo sampling for the classical-plasma
+analogy of the Laughlin wave function. The probability distribution
+which is sampled is defined in the README.md file, which also includes
+a note on the physical units used in this program.
 '''
 
 import os
