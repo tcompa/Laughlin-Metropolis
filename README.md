@@ -1,4 +1,5 @@
 # Laughlin-Metropolis
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1161969.svg)](https://doi.org/10.5281/zenodo.1161969)
 [![Build Status](https://travis-ci.org/tcompa/Laughlin-Metropolis.svg?branch=master)](https://travis-ci.org/tcompa/Laughlin-Metropolis)
 
 ## What is this?
@@ -13,17 +14,23 @@ cond-mat.quant-gas](https://arxiv.org/abs/1712.07940), by R. O. Umucalilar, E.
 Macaluso, T. Comparin, and I. Carusotto].
 
 If you use this code in a scientific project, please cite [the corresponding
-Zenodo entry]():
+Zenodo entry](https://zenodo.org/record/1161969):
 ```
-xxx
+@misc{tommaso_comparin_2018_1161969,
+  author       = {Tommaso Comparin, Elia Macaluso},
+  title        = {{tcompa/Laughlin-Metropolis: Laughlin-Metropolis v1.0}},
+  year         = 2018,
+  doi          = {10.5281/zenodo.1161969},
+  url          = {https://doi.org/10.5281/zenodo.1161969}
+}
 ```
 
 ## How to use it?
 This code requires the [numpy](http://www.numpy.org/) and
-[cython](http://cython.org/) libraries.
-It is working on python 2.7, 3.4, 3.5 and 3.6 (elementary tests
-are available in the `Tests` folder, and they are performed at each commit -
-see the current status on https://travis-ci.org/tcompa/xx).
+[cython](http://cython.org/) libraries.  It works on python 2.7, 3.4, 3.5 and
+3.6 (elementary tests are available in the `Tests` folder, and they are
+performed at each commit - see the current status on
+https://travis-ci.org/tcompa/Laughlin-Metropolis).
 
 Before being imported in a python script, the module
 `lib_laughlin_metropolis.pyx` has to be compiled through the command
