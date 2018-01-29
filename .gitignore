@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+lib_laughlin_metropolis.c
+lib_laughlin_metropolis.html
+lib_laughlin_metropolis.so
+*.swp
+data*
+Makefile
