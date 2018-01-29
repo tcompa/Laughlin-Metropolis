@@ -31,6 +31,8 @@ This code requires the [numpy](http://www.numpy.org/) and
 3.6 (elementary tests are available in the `Tests` folder, and they are
 performed at each commit - see the current status on
 https://travis-ci.org/tcompa/Laughlin-Metropolis).
+To run the examples, also the [future](https://pypi.python.org/pypi/future) and
+[matplotlib](http://matplotlib.org/) libraries.
 
 Before being imported in a python script, the module
 `lib_laughlin_metropolis.pyx` has to be compiled through the command
@@ -38,6 +40,12 @@ Before being imported in a python script, the module
     $ python setup_cython.py build_ext --inplace
 
 After this step, it can be imported in ordinary python scripts.
+Have a look at the two example files:
++ In `example_1_mean_square_radius.py`, the average square radius is computed
+in several Monte Carlo runs.
++ In `example_2_density_profile.py`, the density profile is computed and shown,
+for parameters corresponding to Fig. 2(b) of the reference above
+[Umucalilar et al., 2017].
 
 # License
 MIT License
