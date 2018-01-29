@@ -7,7 +7,7 @@ from lib_laughlin_metropolis import main_laughlin_mc
 
 
 N = 10                                        # Number of particles
-m = 2.0                                       # XXX
+m = 2.0                                       # Particle charge (in the plasma analogy)
 Nqh = 2                                       # Number of quasiholes
 xqh = numpy.array([[0.0, 0.0], [1.0, 0.0]])   # Coordinates of quasiholes
 delta = 0.5                                   # Maximum displacement in Monte Carlo moves

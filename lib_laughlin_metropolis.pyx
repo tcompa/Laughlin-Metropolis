@@ -1,3 +1,14 @@
+'''
+Program: lib_laughlin_metropolis.pyx
+Authors: Tommaso Comparin (tommaso.comparin@unitn.it),
+         Elia Macaluso (elia.macaluso@unitn.it)
+
+This program implements the Monte Carlo sampling for classical-plasma
+analogy of the Laughlin wave function. The correspoding probability
+distribution is defined in the README.md file, which also includes a
+note on the physical units used here.
+'''
+
 import os
 import sys
 import time
@@ -63,7 +74,7 @@ def main_laughlin_mc(int N, double m, int Nqh, double [:, :] xqh, double delta,
     N : int
         Number of particles
     m : double
-        Charge, such that beta=2/m
+        Particle charge in the plasma analogy (such that beta=2/m)
     Nqh : int
         Number of quasiholes
     xqh : two-dimensional array, shape (Nqh, 2)

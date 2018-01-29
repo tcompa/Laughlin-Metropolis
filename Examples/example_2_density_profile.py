@@ -12,7 +12,7 @@ from lib_laughlin_metropolis import main_laughlin_mc
 # Part 1/3: Monte Carlo run
 ## Define parameters
 N = 20                                        # Number of particles
-m = 2.0                                       # XXX
+m = 2.0                                       # Particle charge (in the plasma analogy)
 Nqh = 2                                       # Number of quasiholes
 xqh = numpy.array([[-2.5, 0.0], [2.5, 0.0]])  # Coordinates of quasiholes
 delta = 0.4                                   # Maximum displacement in Monte Carlo moves
@@ -47,12 +47,13 @@ H[indices_empty_bins] = numpy.nan
 tot_measures = numpy.nansum(H)
 H /= (float(tot_measures) * binwidth ** 2)
 H *= N
-## Rescale all lengths by sqrt(2)
-xedges *= (2.0 ** 0.5)
-yedges *= (2.0 ** 0.5)
-xqh *= (2.0 ** 0.5)
-H /= 2.0
-print('WARNING: All length scales are being rescaled by sqrt(2).')
+## Rescale all lengths by lB=1/sqrt(2)
+lB = 1.0 / numpy.sqrt(2.0)
+xedges /= lB
+yedges /= lB
+xqh /= lB
+H *= (lB ** 2)
+print('Note: All length scales are being rescaled by lB=1/sqrt(2).')
 
 # Part 3/3: Show density-profile histogram
 ## Plot histogram
