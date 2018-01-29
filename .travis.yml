@@ -10,4 +10,4 @@ install:
 
 script:
 - python setup_cython.py build_ext --inplace
-- nosetests -s -v -w tests
+- nosetests -s -v -w Tests
