@@ -1,9 +1,10 @@
 # Laughlin-Metropolis
-Metropolis Monte Carlo sampling for the Laughlin wave function with quasiholes
+[![Build Status](https://travis-ci.org/tcompa/Laughlin-Metropolis.svg?branch=master)](https://travis-ci.org/tcompa/Laughlin-Metropolis)
 
 ## What is this?
 This is a simple python/cython code implementing the Metropolis Monte Carlo
-algorithm for sampling from the Laughlin wave function.
+algorithm to sample configurations from the Laughlin wave function with an
+arbitrary number of quasiholes.
 
 The program was developed by Tommaso Comparin and Elia Macaluso to produce some
 of the results reported in the following paper: *Observing anyonic statistics
