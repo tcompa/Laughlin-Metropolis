@@ -18,7 +18,7 @@ Zenodo entry](https://zenodo.org/record/1161969):
 ```
 @misc{tommaso_comparin_2018_1161969,
   author       = {Tommaso Comparin, Elia Macaluso},
-  title        = {{tcompa/Laughlin-Metropolis: Laughlin-Metropolis v1.0}},
+  title        = {{tcompa/Laughlin-Metropolis: Laughlin-Metropolis}},
   year         = 2018,
   doi          = {10.5281/zenodo.1161969},
   url          = {https://doi.org/10.5281/zenodo.1161969}
@@ -27,12 +27,12 @@ Zenodo entry](https://zenodo.org/record/1161969):
 
 ## How to use it?
 This code requires the [numpy](http://www.numpy.org/) and
-[cython](http://cython.org/) libraries.  It works on python 2.7, 3.4, 3.5 and
-3.6 (elementary tests are available in the `Tests` folder, and they are
-performed at each commit - see the current status on
+[cython](http://cython.org/) libraries, and it works on python 2.7, 3.4, 3.5 and
+3.6. Elementary tests are available in the `Tests` folder, and they are
+performed at each commit (see the current status on
 https://travis-ci.org/tcompa/Laughlin-Metropolis).
 To run the examples, also the [future](https://pypi.python.org/pypi/future) and
-[matplotlib](http://matplotlib.org/) libraries.
+[matplotlib](http://matplotlib.org/) libraries are needed.
 
 Before being imported in a python script, the module
 `lib_laughlin_metropolis.pyx` has to be compiled through the command
@@ -40,16 +40,17 @@ Before being imported in a python script, the module
     $ python setup_cython.py build_ext --inplace
 
 After this step, it can be imported in ordinary python scripts.
-Have a look at the two example files (in the `Examples` folder):
+Have a look at the example scripts (in the `Examples` folder):
 + In `example_1_mean_square_radius.py`, the average square radius is computed
 in several Monte Carlo runs.
 + In `example_2_density_profile.py`, the density profile is computed and shown,
 for parameters corresponding to Fig. 2(b) of the reference above
 [Umucalilar et al.].
-
++ In `example_3_wigner_crystal.py`, a Monte Carlo simulation is performed for a
+large value of m (where the system is in the Wigner-crystal phase), and the
+final configuration is shown.
 
 ## Note on physical units
-
 Within our program, the unit of length is defined such that
 
 <img src="https://latex.codecogs.com/gif.latex?l_B&space;\sqrt{2}&space;=&space;1" title="l_B \sqrt{2} = 1" />,

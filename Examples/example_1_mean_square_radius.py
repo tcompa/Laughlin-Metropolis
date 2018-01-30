@@ -1,5 +1,12 @@
-from __future__ import print_function
+'''
+Program: example_1_mean_square_radius.py
+Author: Tommaso Comparin
 
+This program performs several Monte Carlo runs and computes the
+corresponding mean square radius.
+'''
+
+from __future__ import print_function
 import numpy
 import sys
 sys.path.append('..')

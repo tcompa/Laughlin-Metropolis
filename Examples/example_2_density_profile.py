@@ -1,5 +1,12 @@
-from __future__ import print_function
+'''
+Program: example_2_density_profile.py
+Author: Tommaso Comparin
 
+This program reproduces Fig.2(b) of the reference quoted in the
+README.md file [Umucalilar et al.].
+'''
+
+from __future__ import print_function
 import json
 import numpy
 import matplotlib.pyplot as plt
