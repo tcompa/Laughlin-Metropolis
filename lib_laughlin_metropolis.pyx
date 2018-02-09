@@ -137,16 +137,17 @@ def main_laughlin_mc(int N, double m, int Nqh, double [:, :] xqh, double delta,
     cdef double [:, :] x = numpy.zeros((N, 2))
     cdef double[:, :] xnew = numpy.zeros((N, 2))
     if ContinuePreviousRun and os.path.isfile(file_config):
-        with open(fparams, 'w') as out_params:
+        with open(fparams, 'a') as out_params:
             out_params.write('# Reading initial configuration from %s.\n' % file_config)
         x = numpy.loadtxt(file_config)
     else:
-        with open(fparams, 'w') as out_params:
+        with open(fparams, 'a') as out_params:
             out_params.write('# Generating random initial configuration with xmax=%f.' % xmax)
         for i_part in xrange(N):
             x[i_part, 0] = random.uniform(-xmax, xmax)
             x[i_part, 1] = random.uniform(-xmax, xmax)
-    cdef double betaE = compute_beta_energy(x, N, xqh, Nqh, m), deltabetaE
+    cdef double betaE = compute_beta_energy(x, N, xqh, Nqh, m)
+    cdef double deltabetaE
 
     # Monte Carlo loop
     for step in xrange(nsteps):
