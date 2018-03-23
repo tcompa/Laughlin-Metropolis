@@ -53,11 +53,11 @@ final configuration is shown.
 ## Note on physical units
 Within our program, the unit of length is defined such that
 
-<img src="https://latex.codecogs.com/gif.latex?l_B&space;\sqrt{2}&space;=&space;1" title="l_B \sqrt{2} = 1" />,
+<img src="Latex_equations/eq1_lB.gif" title="l_B \sqrt{2} = 1" />,
 
 and the (non-normalized) probability distribution sampled with the Monte Carlo algorithm reads
 
-<img src="https://latex.codecogs.com/gif.latex?p\left(\lbrace&space;\mathbf{z}&space;\rbrace,&space;\lbrace&space;\mathbf{\xi}&space;\rbrace\right)&space;=&space;\exp&space;\left\lbrace-&space;\left[&space;\sum_{i=1}^N&space;|z_i|^2&space;-&space;\sum_{i=1}^N&space;\sum_{j=1}^{N_\mathrm{qh}}&space;\log\left(&space;2\left|\mathbf{z}_i&space;-&space;\mathbf{\xi}_j&space;\right|^2&space;\right&space;)&space;-&space;m&space;\sum_{i=1}^N&space;\sum_{j<i}&space;\log\left(&space;2\left|\mathbf{z}_i&space;-&space;\mathbf{z}_j&space;\right|^2&space;\right&space;)&space;\right&space;]&space;\right&space;\rbrace" title="p\left(\lbrace \mathbf{z} \rbrace, \lbrace \mathbf{\xi} \rbrace\right) = \exp \left\lbrace- \left[ \sum_{i=1}^N |z_i|^2 - \sum_{i=1}^N \sum_{j=1}^{N_\mathrm{qh}} \log\left( 2\left|\mathbf{z}_i - \mathbf{\xi}_j \right|^2 \right ) - m \sum_{i=1}^N \sum_{j<i} \log\left( 2\left|\mathbf{z}_i - \mathbf{z}_j \right|^2 \right ) \right ] \right \rbrace" />.
+<img src="Latex_equations/eq2_p.gif" title="p\left(\lbrace \mathbf{z} \rbrace, \lbrace \mathbf{\xi} \rbrace\right) = \exp \left\lbrace- \left[ \sum_{i=1}^N |z_i|^2 - \sum_{i=1}^N \sum_{j=1}^{N_\mathrm{qh}} \log\left( 2\left|\mathbf{z}_i - \mathbf{\xi}_j \right|^2 \right ) - m \sum_{i=1}^N \sum_{j<i} \log\left( 2\left|\mathbf{z}_i - \mathbf{z}_j \right|^2 \right ) \right ] \right \rbrace" />.
 
 ## License
 MIT License
