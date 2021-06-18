@@ -1,3 +1,5 @@
+#cython: language_level=3
+
 '''
 Program: lib_laughlin_metropolis.pyx
 Authors: Tommaso Comparin (tommaso.comparin@unitn.it),
@@ -123,7 +125,7 @@ def main_laughlin_mc(int N, double m, int Nqh, double [:, :] xqh, double delta,
         with open('data_%s_xy_hist_params.json' % ID, 'w') as out_tmp:
             out_tmp.write('{\n"nbins": %i,\n "xmax_hist": %.8f,\n "binwidth": %.8f\n}' % (nbins, xmax_hist, binwidth))
     fparams = 'data_%s_params.dat' % ID
-    time_start = time.clock()
+    time_start = time.process_time()
     with open(fparams, 'w') as out_params:
         out_params.write('# ' + time.strftime("%a, %d %b %Y %H:%M:%S %Z") + '\n')
         out_params.write('# Running on %s\n' % socket.gethostname())
@@ -201,5 +203,5 @@ def main_laughlin_mc(int N, double m, int Nqh, double [:, :] xqh, double delta,
     with open(fparams, 'a') as out_params:
         out_params.write('# Output\n')
         out_params.write('  Acceptance_ratio: %f [%i/%i]\n' % (n_acc / float(nsteps), n_acc, nsteps))
-        elapsed = time.clock() - time_start
+        elapsed = time.process_time() - time_start
         out_params.write('  Elapsed_time: %.2f s %.3e s/step\n#\n' % (elapsed, elapsed / nsteps))
